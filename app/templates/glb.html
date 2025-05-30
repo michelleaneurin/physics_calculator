@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>GLB - Gerak Lurus Beraturan</h2>
+<form method="POST">
+    <label>Jarak (m):</label>
+    <input type="number" name="distance" step="any" required><br>
+    <label>Waktu (s):</label>
+    <input type="number" name="time" step="any" required><br>
+    <button type="submit">Hitung Kecepatan</button>
+</form>
+{% if result is not none %}
+<p>Kecepatan = {{ result }} m/s</p>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>GLBB - Gerak Lurus Berubah Beraturan</h2>
+<form method="POST">
+    <label>Kecepatan awal (m/s):</label>
+    <input type="number" name="v0" step="any" required><br>
+    <label>Percepatan (m/s²):</label>
+    <input type="number" name="a" step="any" required><br>
+    <label>Waktu (s):</label>
+    <input type="number" name="t" step="any" required><br>
+    <button type="submit">Hitung Kecepatan Akhir</button>
+</form>
+{% if result is not none %}
+<p>Kecepatan akhir = {{ result }} m/s</p>
+{% endif %}
+{% endblock %}
